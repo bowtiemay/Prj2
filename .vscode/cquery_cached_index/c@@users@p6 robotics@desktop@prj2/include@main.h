@@ -29,8 +29,10 @@
 
 #include <API.h>
 
-#define QUAD_TOP_PORT 10
-#define QUAD_BOTTOM_PORT 9
+#define QUAD_TOP_PORT 11 //shoulder
+#define QUAD_BOTTOM_PORT 12
+#define QUAD_TOP_PORTT 7 //elbow
+#define QUAD_BOTTOM_PORTT 8
 #define LIMIT_SWITCH 4
 
 //////////////////////

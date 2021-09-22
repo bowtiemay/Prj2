@@ -28,6 +28,7 @@
 
    bool is_reversed = false;
    encoder = encoderInit(QUAD_TOP_PORT, QUAD_BOTTOM_PORT, is_reversed);
+   yeet = encoderInit(QUAD_TOP_PORTT, QUAD_BOTTOM_PORTT, is_reversed);
    // ... Do work
    // Get encoder reading in degrees
    int counts = encoderGet(encoder);
