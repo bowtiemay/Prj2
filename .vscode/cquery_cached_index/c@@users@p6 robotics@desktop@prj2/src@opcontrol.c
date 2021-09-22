@@ -98,7 +98,7 @@
           wristSet(0);
         }
 
-        pot = digitalRead(5);
+        pot = analogRead(5);
         printf("the pot value %d \n", pot);
         printf("the encoder value %d \n", counts);
         printf("the encoder value %d \n", counts2);
