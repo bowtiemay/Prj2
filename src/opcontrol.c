@@ -102,7 +102,7 @@
         printf("the pot value %d \n", pot);
         printf("the encoder value %d \n", counts);
         printf("the encoder value %d \n", counts2);
-        delay(1000);
+        delay(600);
 
      }
 }
