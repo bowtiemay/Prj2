@@ -12,6 +12,7 @@
 #include "claw.h"
 #include "elbow.h"
 #include "wrist.h"
+#include "homeshoulder.h"
 
 
 /*
