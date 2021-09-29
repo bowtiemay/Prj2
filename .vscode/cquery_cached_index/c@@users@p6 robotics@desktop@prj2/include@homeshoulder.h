@@ -4,16 +4,18 @@
 #include "shoulder.h"
 
 void homeShoulder(int homePosition, Encoder encoder) {
-
+  delay(5);
   printf("homing started, stand by \n");
 
-  if (joystickGetDigital(1, 7, JOY_UP == 1)) {
+  while (digitalRead(LIMIT_SWITCH) == false) {  // while limit switch is not pressed
     shoulderSet(-50);
     printf("looking for limit switch");
   }
 
+  //once the encoder is pressed, reset it
   encoderReset(encoder);
 
+  //while the encoder position is less than the home position, move the shoulder towards th home position
   while (encoderGet(encoder) < homePosition) {
     shoulderSet(50);
     printf("moving to home position");
@@ -22,6 +24,8 @@ void homeShoulder(int homePosition, Encoder encoder) {
   encoderReset(encoder);
 
   printf("homing complete \n");
+
+  delay(10);
 }
 
 

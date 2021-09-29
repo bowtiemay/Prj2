@@ -42,6 +42,8 @@
 
    while (1) {
 
+      homeShoulder(90, encoder);
+
        power = joystickGetAnalog(1, 1); // vertical axis on left joystick
        turn  = joystickGetAnalog(1, 2); // horizontal axis on right joystick
        motorSet(3, power + turn); // set left wheels
