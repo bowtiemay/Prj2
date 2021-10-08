@@ -5,7 +5,7 @@
 void chassisSet(int left, int right);
 
 void elbowSet(int speed) {
-  motorSet(5, speed);
+  motorSet(4, speed);
 }
 
 #endif
