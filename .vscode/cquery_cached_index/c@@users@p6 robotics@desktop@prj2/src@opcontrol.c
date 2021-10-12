@@ -42,7 +42,7 @@
 
    while (1) {
       if (joystickGetDigital(1, 8, JOY_LEFT) == 1){
-          homeShoulder(36, encoder);
+          homeShoulder(250, encoder);
       }
 
        power = joystickGetAnalog(1, 1); // vertical axis on left joystick
