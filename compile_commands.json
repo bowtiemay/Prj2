@@ -24,11 +24,11 @@
             "-fdiagnostics-color",
             "-std=gnu99",
             "-o",
-            "bin/init.c.o",
-            "src\\init.c"
+            "C:/Users/P6ROBO~1/AppData/Local/Temp/tmplu5vgd2y/opcontrol.c.o",
+            "src\\opcontrol.c"
         ],
         "directory": "C:\\Users\\P6 Robotics\\Desktop\\prj2",
-        "file": "src\\init.c"
+        "file": "src\\opcontrol.c"
     },
     {
         "arguments": [
@@ -55,7 +55,7 @@
             "-fdiagnostics-color",
             "-std=gnu99",
             "-o",
-            "bin/auto.c.o",
+            "C:/Users/P6ROBO~1/AppData/Local/Temp/tmplu5vgd2y/auto.c.o",
             "src\\auto.c"
         ],
         "directory": "C:\\Users\\P6 Robotics\\Desktop\\prj2",
@@ -86,10 +86,10 @@
             "-fdiagnostics-color",
             "-std=gnu99",
             "-o",
-            "bin/opcontrol.c.o",
-            "src\\opcontrol.c"
+            "C:/Users/P6ROBO~1/AppData/Local/Temp/tmplu5vgd2y/init.c.o",
+            "src\\init.c"
         ],
         "directory": "C:\\Users\\P6 Robotics\\Desktop\\prj2",
-        "file": "src\\opcontrol.c"
+        "file": "src\\init.c"
     }
 ]

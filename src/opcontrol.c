@@ -13,10 +13,10 @@
 #include "elbow.h"
 #include "wrist.h"
 #include "homeshoulder.h"
+#include "homeElbow.h"
+#include "jointcontrol.h"
 
 
-/*
- */
  void operatorControl() {
 
    Encoder encoder;
@@ -33,7 +33,7 @@
    bool is_reversed = true;
    encoder = encoderInit(QUAD_TOP_PORT, QUAD_BOTTOM_PORT, is_reversed);
    yeet = encoderInit(QUAD_TOP_PORTT, QUAD_BOTTOM_PORTT, is_reversed);
-
+   
    // encoderReset(encoder);
    // encoderReset(yeet);
 
@@ -41,9 +41,17 @@
    // printf("Hello %d", (counts2));
 
    while (1) {
-      if (joystickGetDigital(1, 8, JOY_LEFT) == 1){
-          homeShoulder(250, encoder);
+
+      if (joystickGetDigital(1, 8, JOY_LEFT) == 1) {
+        homeShoulder(260, encoder);
+        homeElbow(-100, yeet);
       }
+      // if (joystickGetDigital(1, 8, JOY_RIGHT) == 1) {
+      //   homeShoulder()
+      // }
+      // if (joystickGetDigital(1, 8, JOY_RIGHT) == 1) {
+      //   regulateJoint(560, encoder);
+      // }
 
        power = joystickGetAnalog(1, 1); // vertical axis on left joystick
        turn  = joystickGetAnalog(1, 2); // horizontal axis on right joystick
@@ -56,7 +64,6 @@
        }
        else if(joystickGetDigital(1, 8, JOY_DOWN) == 1) {
          clawSet(-127); // pressing down, so lift should go down
-
        }
        else {
          clawSet(0);
@@ -69,8 +76,8 @@
       }
       else if(joystickGetDigital(1, 7, JOY_DOWN) == 1) {
         shoulderSet(-127); // pressing down, so lift should go down
-
       }
+
       else {
         shoulderSet(0);
       }
