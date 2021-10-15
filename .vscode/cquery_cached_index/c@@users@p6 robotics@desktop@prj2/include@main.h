@@ -35,6 +35,7 @@
 #define QUAD_TOP_PORTT 7 //elbow
 #define QUAD_BOTTOM_PORTT 8
 #define LIMIT_SWITCH 4
+#define LIMIT_SWITCH_BUTT 3
 
 //////////////////////
 
