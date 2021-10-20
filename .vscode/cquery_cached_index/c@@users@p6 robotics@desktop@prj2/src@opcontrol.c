@@ -33,7 +33,7 @@
    bool is_reversed = true;
    encoder = encoderInit(QUAD_TOP_PORT, QUAD_BOTTOM_PORT, is_reversed);
    yeet = encoderInit(QUAD_TOP_PORTT, QUAD_BOTTOM_PORTT, is_reversed);
-   
+
    // encoderReset(encoder);
    // encoderReset(yeet);
 
@@ -43,8 +43,8 @@
    while (1) {
 
       if (joystickGetDigital(1, 8, JOY_LEFT) == 1) {
-        homeShoulder(260, encoder);
-        homeElbow(-100, yeet);
+        homeShoulder(104, encoder);
+        homeElbow(-190, yeet);
       }
       // if (joystickGetDigital(1, 8, JOY_RIGHT) == 1) {
       //   homeShoulder()

@@ -9,7 +9,7 @@ void homeShoulder(int homePosition, Encoder encoder) {
   while (digitalRead(LIMIT_SWITCH) == true) {  // while limit switch is not pressed
     shoulderSet(-50);
     printf("looking for limit switch \n");
-    delay(200);
+    delay(20);
     }
     //once the encoder is pressed, reset it and stop arm mvmt
   shoulderSet(0);
@@ -20,7 +20,7 @@ void homeShoulder(int homePosition, Encoder encoder) {
   while (encoderGet(encoder) < homePosition + 10) {
     shoulderSet(50);
     printf("moving to home %d  \n", encoderGet(encoder));
-    delay(200);
+    delay(20);
   }
   shoulderSet(0);
   encoderReset(encoder);
