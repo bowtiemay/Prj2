@@ -41,10 +41,13 @@
    // printf("Hello %d", (counts2));
 
    while (1) {
+      printf("the encoder value %d \n", encoderGet(yeet));
+      printf("the encoder that supposedly works %d \n", encoderGet(encoder));
+      delay(1000);
 
       if (joystickGetDigital(1, 8, JOY_LEFT) == 1) {
-        homeShoulder(104, encoder);
-        homeElbow(-190, yeet);
+        homeShoulder(190, encoder);
+        homeElbow(80, yeet);
       }
       // if (joystickGetDigital(1, 8, JOY_RIGHT) == 1) {
       //   homeShoulder()
@@ -111,8 +114,8 @@
       counts2 = encoderGet(yeet);
       pot = analogRead(5);
       // printf("the pot value %d \n", pot);
-      printf("the encoder value %d \n", counts);
-      //printf("the encoder value %d \n", counts2);
+      //printf("the encoder value %d \n", counts);
+    //  printf("the encoder value %d \n", encoderGet(yeet));
       delay(1000);
 
     }

@@ -16,8 +16,8 @@ void homeElbow(int homePosition, Encoder encoder) {
   printf("elbow encoder has been reset");
 
   //while the encoder position is less than the home position, move the shoulder towards th home position
-  while (encoderGet(encoder) < homePosition + 10) {
-    elbowSet(10);
+  while (encoderGet(encoder) != homePosition + 10) { // change != to less than
+    elbowSet(50);
     printf("moving elbow to home %d  \n", encoderGet(encoder));
   }
   elbowSet(0);

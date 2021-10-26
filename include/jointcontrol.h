@@ -5,7 +5,7 @@
 
 void regulateJoint(int stayPosition, Encoder encoder) {
 
-  printf("keeping the joint at ur specifide position lololol");
+  printf("keeping the joint at ur specified position lololol");
 
   int jointPosition = encoderGet(encoder);
 
