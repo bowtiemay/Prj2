@@ -1,28 +1,24 @@
-#ifndef _HOMESHOULDER_H
-#define _HOMESHOULDER_H_
+#ifndef _JOINTCONTROL_H
+#define _JOINTCONTROL_H_
 #include "main.h"
+#include "elbow.h"
 #include "shoulder.h"
 
 void regulateJoint(int stayPosition, Encoder encoder) {
 
-  printf("keeping the joint at ur specified position lololol");
+  printf("keeping the elbow joint at ur specified position lololol");
 
   int jointPosition = encoderGet(encoder);
 
-  if (jointPosition < stayPosition) {
-    shoulderSet(10);
-  }
-  else {
+  while (jointPosition > stayPosition) {
+    printf("joint pos is greater than the desired pos");
     shoulderSet(-10);
   }
 
-  // while (jointPosition > stayPosition) {
-  //   shoulderSet(-10);
-  // }
-
-  // if (jointPosition < stayPosition-50) {
-  //   shoulderSet(10);
-  // }
+  while (jointPosition < stayPosition) {
+    shoulderSet(10);
+    printf("joint pos is less than the desired pos");
+  }
 }
 
 

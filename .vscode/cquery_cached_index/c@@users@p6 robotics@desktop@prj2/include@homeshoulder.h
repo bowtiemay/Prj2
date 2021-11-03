@@ -2,6 +2,7 @@
 #define _HOMESHOULDER_H_
 #include "main.h"
 #include "shoulder.h"
+#include "jointcontrol.h"
 
 void homeShoulder(int homePosition, Encoder encoder) {
   printf("homing started (S), stand by \n");
@@ -10,7 +11,7 @@ void homeShoulder(int homePosition, Encoder encoder) {
     shoulderSet(-50);
     printf("looking for limit switch S \n");
     delay(20);
-    }
+  }
     //once the encoder is pressed, reset it and stop arm mvmt
   shoulderSet(0);
   encoderReset(encoder);
@@ -28,6 +29,7 @@ void homeShoulder(int homePosition, Encoder encoder) {
   delay(10);
 
   printf("homing complete (S) \n");
+
 }
 
 
