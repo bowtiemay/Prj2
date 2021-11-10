@@ -1,8 +1,8 @@
 #ifndef _HOMEELBOW_H
 #define _HOMEELBOW_H_
 #include "main.h"
-#include "elbow.h"
-#include "jointcontrol.h"
+//#include "elbow.h"
+//#include "jointcontrol.h"
 
 void homeElbow(int homePosition, Encoder encoder) {
   printf("elbow homing started, stand by \n");

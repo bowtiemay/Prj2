@@ -1,8 +1,8 @@
 #ifndef _HOMESHOULDER_H
 #define _HOMESHOULDER_H_
 #include "main.h"
-#include "shoulder.h"
-#include "jointcontrol.h"
+//#include "shoulder.h"
+//#include "jointcontrol.h"
 
 void homeShoulder(int homePosition, Encoder encoder) {
   printf("homing started (S), stand by \n");

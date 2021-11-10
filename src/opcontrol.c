@@ -15,6 +15,7 @@
 #include "homeshoulder.h"
 #include "homeElbow.h"
 #include "jointcontrol.h"
+#include "math.h"
 
 
  void operatorControl() {

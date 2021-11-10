@@ -1,8 +1,8 @@
 #ifndef _JOINTCONTROL_H
 #define _JOINTCONTROL_H_
 #include "main.h"
-#include "elbow.h"
-#include "shoulder.h"
+//#include "elbow.h"
+//#include "shoulder.h"
 
 void regulateJoint(int stayPosition, Encoder encoder) {
 
