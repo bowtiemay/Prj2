@@ -2,7 +2,6 @@
 #define _HOMESHOULDER_H_
 #include "main.h"
 #include "shoulder.h"
-#include "jointcontrol.h"
 
 void homeShoulder(int homePosition, Encoder encoder) {
   printf("homing started (S), stand by \n");
@@ -18,7 +17,7 @@ void homeShoulder(int homePosition, Encoder encoder) {
   printf("encoder (S) has been reset");
 
   //while the encoder position is less than the home position, move the shoulder towards th home position
-  while (encoderGet(encoder) < homePosition + 10) {
+  while (encoderGet(encoder) < homePosition) {
     shoulderSet(50);
     printf("moving to home (S) %d  \n", encoderGet(encoder));
     delay(20);

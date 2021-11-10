@@ -12,11 +12,11 @@ void regulateJoint(int stayPosition, Encoder encoder) {
 
   while (jointPosition > stayPosition) {
     printf("joint pos is greater than the desired pos");
-    shoulderSet(-10);
+    shoulderSet(-20);
   }
 
   while (jointPosition < stayPosition) {
-    shoulderSet(10);
+    shoulderSet(20);
     printf("joint pos is less than the desired pos");
   }
 }

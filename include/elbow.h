@@ -2,7 +2,8 @@
 #define _ELBOW_H_
 #include "main.h"
 
-void chassisSet(int left, int right);
+
+
 
 void elbowSet(int speed) {
   motorSet(4, speed);

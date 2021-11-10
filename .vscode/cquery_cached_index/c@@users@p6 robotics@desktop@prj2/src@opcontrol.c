@@ -46,14 +46,16 @@
       delay(1000);
 
       if (joystickGetDigital(1, 8, JOY_LEFT) == 1) {
-        homeShoulder(190, encoder);
-        homeElbow(80, yeet);
+        homeShoulder(330, encoder);
+        homeElbow(210, yeet);
+        regulateJoint(210, yeet);
+        regulateJoint(330, encoder);
       }
       // if (joystickGetDigital(1, 8, JOY_RIGHT) == 1) {
       //   homeShoulder()
       // }
       // if (joystickGetDigital(1, 8, JOY_RIGHT) == 1) {
-      //   regulateJoint(560, encoder);
+      // regulateJoint(560, encoder);
       // }
 
        power = joystickGetAnalog(1, 1); // vertical axis on left joystick
