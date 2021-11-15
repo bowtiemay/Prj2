@@ -31,6 +31,9 @@
    int shoulderPower;
    int pot = 0;
 
+   int xVal = 2;
+   int zVal = 20; //constant
+
    bool is_reversed = true;
    encoder = encoderInit(QUAD_TOP_PORT, QUAD_BOTTOM_PORT, is_reversed);
    yeet = encoderInit(QUAD_TOP_PORTT, QUAD_BOTTOM_PORTT, is_reversed);
@@ -50,13 +53,13 @@
         homeShoulder(190, encoder);
         homeElbow(80, yeet);
       }
-      // if (joystickGetDigital(1, 8, JOY_RIGHT) == 1) {
-      //   homeShoulder()
-      // }
-      // if (joystickGetDigital(1, 8, JOY_RIGHT) == 1) {
-      //   regulateJoint(560, encoder);
-      // }
 
+      if(joystickGetDigital(1, 8, JOY_RIGHT)== 1){
+
+        determineAngles(xVal, zVal, forearm, bicep); //stays constant
+        drawLine(*determineAngles(), encoder, yeet;
+
+      }
        power = joystickGetAnalog(1, 1); // vertical axis on left joystick
        turn  = joystickGetAnalog(1, 2); // horizontal axis on right joystick
        motorSet(3, power + turn); // set left wheels
@@ -117,6 +120,10 @@
       // printf("the pot value %d \n", pot);
       //printf("the encoder value %d \n", counts);
     //  printf("the encoder value %d \n", encoderGet(yeet));
+
+
+int angleNew = determineAngles(x,y l1 and l2)
+    drawLine(*determineAngles(), encoder, yeet  )//the astrisk UNPACKS what is returned.
       delay(1000);
 
     }
