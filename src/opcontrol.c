@@ -16,6 +16,7 @@
 #include "homeElbow.h"
 #include "jointcontrol.h"
 #include "math.h"
+#include "straightLine.h"
 
 
  void operatorControl() {
@@ -33,6 +34,8 @@
 
    int xVal = 2;
    int zVal = 20; //constant
+   double forearm = 35;
+   double bicep = 27;
 
    bool is_reversed = true;
    encoder = encoderInit(QUAD_TOP_PORT, QUAD_BOTTOM_PORT, is_reversed);
@@ -54,10 +57,11 @@
         homeElbow(80, yeet);
       }
 
-      if(joystickGetDigital(1, 8, JOY_RIGHT)== 1){
+      if(joystickGetDigital(1, 8, JOY_RIGHT) == 1){
 
-        determineAngles(xVal, zVal, forearm, bicep); //stays constant
-        drawLine(*determineAngles(), encoder, yeet;
+        double angle2 = determineAngle2(xVal, zVal, forearm, bicep); //stays constant
+        double angle1 = determineAngle1(xVal, zVal, forearm, bicep, angle2); //stays constant
+        xVal = drawLine(angle1, angle2, encoder, yeet, xVal);
 
       }
        power = joystickGetAnalog(1, 1); // vertical axis on left joystick
@@ -117,14 +121,5 @@
       counts = encoderGet(encoder);
       counts2 = encoderGet(yeet);
       pot = analogRead(5);
-      // printf("the pot value %d \n", pot);
-      //printf("the encoder value %d \n", counts);
-    //  printf("the encoder value %d \n", encoderGet(yeet));
-
-
-int angleNew = determineAngles(x,y l1 and l2)
-    drawLine(*determineAngles(), encoder, yeet  )//the astrisk UNPACKS what is returned.
-      delay(1000);
-
     }
 }

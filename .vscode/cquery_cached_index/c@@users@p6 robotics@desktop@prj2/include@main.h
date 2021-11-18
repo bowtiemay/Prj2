@@ -29,7 +29,7 @@
 // ADDED CODE -- ENCODER
 
 #include <API.h>
-#include <math.h>
+//#include <math.h>
 
 #define QUAD_TOP_PORT 11 //shoulder
 #define QUAD_BOTTOM_PORT 12
