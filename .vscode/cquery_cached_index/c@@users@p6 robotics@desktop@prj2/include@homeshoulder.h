@@ -1,7 +1,12 @@
 #ifndef _HOMESHOULDER_H
 #define _HOMESHOULDER_H_
 #include "main.h"
+<<<<<<< HEAD
 #include "shoulder.h"
+=======
+//#include "shoulder.h"
+//#include "jointcontrol.h"
+>>>>>>> f85897152f98c360c0d7be4a623b45fc72b67f2a
 
 void homeShoulder(int homePosition, Encoder encoder) {
   printf("homing started (S), stand by \n");

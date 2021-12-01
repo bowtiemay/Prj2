@@ -1,12 +1,17 @@
 #ifndef _HOMEELBOW_H
 #define _HOMEELBOW_H_
 #include "main.h"
+<<<<<<< HEAD
 #include "elbow.h"
+=======
+//#include "elbow.h"
+//#include "jointcontrol.h"
+>>>>>>> f85897152f98c360c0d7be4a623b45fc72b67f2a
 
 void homeElbow(int homePosition, Encoder encoder) {
   printf("elbow homing started, stand by \n");
 
-  while (digitalRead(LIMIT_SWITCHH) == true) {  // while limit switch is not pressed
+  while (digitalRead(LIMIT_SWITCHH) == 1) {  // while limit switch is not pressed (maybe replace with true)
     elbowSet(-50);
     printf("looking for elbow limit switch \n");
     }

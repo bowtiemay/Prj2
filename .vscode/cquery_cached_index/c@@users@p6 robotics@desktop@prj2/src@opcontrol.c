@@ -15,6 +15,8 @@
 #include "homeshoulder.h"
 #include "homeElbow.h"
 #include "jointcontrol.h"
+#include "math.h"
+#include "straightLine.h"
 
 #define LINESENSORVALUE1 1
 #define LINESENSORVALUE2 2
@@ -35,7 +37,14 @@
    int shoulderPower;
    int pot = 0;
 
+<<<<<<< HEAD
    int beep;
+=======
+   int xVal = 2;
+   int zVal = 20; //constant
+   double forearm = 35;
+   double bicep = 27;
+>>>>>>> f85897152f98c360c0d7be4a623b45fc72b67f2a
 
    bool is_reversed = true;
    encoder = encoderInit(QUAD_TOP_PORT, QUAD_BOTTOM_PORT, is_reversed);
@@ -127,6 +136,7 @@
           motorSet(3, 50);
         }
       }
+<<<<<<< HEAD
 
       //ULTRASONIC SENSOR FOLLOWING
 
@@ -144,6 +154,16 @@
 
       // ROBOT MVMT CONTROLLED
 
+=======
+
+      if(joystickGetDigital(1, 8, JOY_RIGHT) == 1){
+
+        double angle2 = determineAngle2(xVal, zVal, forearm, bicep); //stays constant
+        double angle1 = determineAngle1(xVal, zVal, forearm, bicep, angle2); //stays constant
+        xVal = drawLine(angle1, angle2, encoder, yeet, xVal);
+
+      }
+>>>>>>> f85897152f98c360c0d7be4a623b45fc72b67f2a
        power = joystickGetAnalog(1, 1); // vertical axis on left joystick
        turn  = joystickGetAnalog(1, 2); // horizontal axis on right joystick
        motorSet(3, power + turn); // set left wheels
@@ -202,9 +222,13 @@
       counts = encoderGet(encoder);
       counts2 = encoderGet(yeet);
       pot = analogRead(5);
+<<<<<<< HEAD
       // printf("the pot value %d \n", pot);
       //printf("the encoder value %d \n", counts);
     //  printf("the encoder value %d \n", encoderGet(yeet));
       delay(40);
 }
+=======
+    }
+>>>>>>> f85897152f98c360c0d7be4a623b45fc72b67f2a
 }

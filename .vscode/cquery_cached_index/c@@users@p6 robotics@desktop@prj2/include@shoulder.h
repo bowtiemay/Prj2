@@ -4,6 +4,8 @@
 
 
 void shoulderSet(int speed) {
+
+
   motorSet(5, -speed);
 }
 
