@@ -24,11 +24,11 @@
             "-fdiagnostics-color",
             "-std=gnu99",
             "-o",
-            "bin/init.c.o",
-            "src\\init.c"
+            "bin/auto.c.o",
+            "src\\auto.c"
         ],
         "directory": "C:\\Users\\P6 Robotics\\Desktop\\prj2",
-        "file": "src\\init.c"
+        "file": "src\\auto.c"
     },
     {
         "arguments": [
@@ -55,11 +55,11 @@
             "-fdiagnostics-color",
             "-std=gnu99",
             "-o",
-            "bin/auto.c.o",
-            "src\\auto.c"
+            "bin/init.c.o",
+            "src\\init.c"
         ],
         "directory": "C:\\Users\\P6 Robotics\\Desktop\\prj2",
-        "file": "src\\auto.c"
+        "file": "src\\init.c"
     },
     {
         "arguments": [

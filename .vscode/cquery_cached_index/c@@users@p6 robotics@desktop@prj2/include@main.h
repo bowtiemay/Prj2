@@ -37,6 +37,10 @@
 #define LIMIT_SWITCH 4
 #define LIMIT_SWITCHH 3
 
+#define LINESENSORVALUE1 1
+#define LINESENSORVALUE2 2
+#define LINESENSORVALUE3 3
+
 //////////////////////
 
 // Allow usage of this file in C++ programs

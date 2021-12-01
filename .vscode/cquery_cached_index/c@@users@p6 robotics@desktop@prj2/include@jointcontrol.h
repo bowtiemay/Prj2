@@ -4,22 +4,35 @@
 #include "elbow.h"
 #include "shoulder.h"
 
-void regulateJoint(int stayPosition, Encoder encoder) {
+void regulateJoint(int stayPositionS, Encoder encoderS, int stayPositionE, Encoder encoderE) {
 
-  printf("keeping the elbow joint at ur specified position lololol");
+  printf("keeping the joints at your specified pos");
 
-  int jointPosition = encoderGet(encoder);
+    int jointPositionS = encoderGet(encoderS);
+    int jointPositionE = encoderGet(encoderE);
 
-  while (jointPosition > stayPosition) {
-    printf("joint pos is greater than the desired pos");
-    shoulderSet(-20);
+
+    if (jointPositionS < stayPositionS) {
+      shoulderSet(20);
+      printf("joint pos is less than the desired pos");
+    }
+
+    else if (jointPositionS > stayPositionS) {
+      printf("joint pos is greater than the desired pos");
+      shoulderSet(-20);
+    }
+
+    else if (jointPositionE > stayPositionE) {
+      printf("joint pos is greater than the desired pos");
+      elbowSet(-20);
+    }
+
+    else if (jointPositionE < stayPositionE) {
+      elbowSet(20);
+      printf("joint pos is less than the desired pos");
+    }
   }
 
-  while (jointPosition < stayPosition) {
-    shoulderSet(20);
-    printf("joint pos is less than the desired pos");
-  }
-}
 
 
 #endif
