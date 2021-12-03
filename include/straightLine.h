@@ -41,8 +41,7 @@ int drawLine(double ang1, double ang2, Encoder encoder, Encoder yeet, int xVal){
     int errorShoulder = abs(encoderCount - ang1);
     int errorElbow = abs(yeetCount - ang2);
 
-      regulateJoint(ang1, encoderCount);
-      regulateJoint(ang2, yeetCount);
+      regulateJoint(ang1, encoderCount, ang2, yeetCount);
 
       if (errorShoulder < 5){
         xVal = xVal+2; //this is the x value going into the determineAngles functions
